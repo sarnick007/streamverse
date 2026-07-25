@@ -1,0 +1,207 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+  --color-accent-400: #a78bfa;
+  --color-accent-500: #8b5cf6;
+  --color-accent-600: #7c3aed;
+  --color-surface-50: #f8fafc;
+  --color-surface-100: #f1f5f9;
+  --color-surface-200: #e2e8f0;
+  --color-surface-300: #cbd5e1;
+  --color-surface-400: #94a3b8;
+  --color-surface-500: #64748b;
+  --color-surface-600: #475569;
+  --color-surface-700: #334155;
+  --color-surface-800: #1e293b;
+  --color-surface-900: #0f172a;
+  --color-surface-950: #020617;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   SCROLLBAR
+   ═══════════════════════════════════════════════════════════════════════ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   SUBSCRIBE GRADIENT BORDER ANIMATION
+   ═══════════════════════════════════════════════════════════════════════ */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.subscribe-gradient-border {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899, #f43f5e, #6366f1);
+  background-size: 300% 300%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   GENRE PILL ACTIVE GLOW
+   ═══════════════════════════════════════════════════════════════════════ */
+.genre-pill-active {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.4), 0 0 40px rgba(139, 92, 246, 0.2);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   VIDEO CARD SHINE EFFECT
+   ═══════════════════════════════════════════════════════════════════════ */
+@keyframes card-shine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.card-shine::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+
+.card-shine:hover::after {
+  animation: card-shine 0.8s ease forwards;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   CINEMA OVERLAY
+   ═══════════════════════════════════════════════════════════════════════ */
+.cinema-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   SKELETON SHIMMER ANIMATION
+   ═══════════════════════════════════════════════════════════════════════ */
+@keyframes skeleton-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    #1e293b 25%,
+    #334155 37%,
+    #1e293b 63%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s ease-in-out infinite;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   TOAST ANIMATIONS
+   ═══════════════════════════════════════════════════════════════════════ */
+@keyframes toast-progress {
+  0% { width: 100%; }
+  100% { width: 0%; }
+}
+
+.toast-progress-bar {
+  animation: toast-progress 3s linear forwards;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   MODAL BACKDROP
+   ═══════════════════════════════════════════════════════════════════════ */
+.modal-backdrop {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   NOTIFICATION PANEL
+   ═══════════════════════════════════════════════════════════════════════ */
+.notification-unread-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6366f1;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.6);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   SEARCH DROPDOWN SHADOW
+   ═══════════════════════════════════════════════════════════════════════ */
+.search-dropdown-shadow {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(99, 102, 241, 0.1);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   PLAYER ASPECT RATIO
+   ═══════════════════════════════════════════════════════════════════════ */
+.player-aspect {
+  aspect-ratio: 16 / 9;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   GLOBAL STYLES
+   ═══════════════════════════════════════════════════════════════════════ */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Focus visible outline for accessibility */
+*:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Remove default focus outline for mouse users */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Scrollbar hiding utility */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
