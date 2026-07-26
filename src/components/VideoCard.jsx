@@ -34,7 +34,7 @@ const VideoCard = ({ video, onClick }) => {
           <div className="absolute inset-0 bg-slate-800 animate-pulse" />
         )}
         <img
-          src={video.thumbnailUrl}
+          src={video.thumbnail}
           alt={`${video.title} thumbnail`}
           loading="lazy"
           decoding="async"
