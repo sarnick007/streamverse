@@ -6,16 +6,16 @@ Live Demo: [https://streamverse-red.vercel.app/](https://streamverse-red.vercel.
 
 ---
 
-## ✨ Features
+##  Features
 
 - **Dynamic Video Player**: Interactive YouTube iframe player with ambient glow matching video theme.
 - **Rich Motion Animations**: Smooth page transitions, micro-interactions, skeleton loading shimmers, and interactive modals.
 - **Search & Suggestions**: Live search filtering across titles, genres, and channels with autocomplete suggestions.
 - **Genre Filter Bar**: Dynamic category pills to filter feed instantly.
 - **Persisted User State**:
-  - 🕒 Watch History
-  - ❤️ Liked Videos
-  - 🔖 Watch Later / Saved Library
+  -  Watch History
+  -  Liked Videos
+  -  Watch Later / Saved Library
 - **Interactive UI Elements**:
   - Toast Notifications (Save/Like/Share feedback)
   - Copyable Share Link Modal
@@ -25,7 +25,7 @@ Live Demo: [https://streamverse-red.vercel.app/](https://streamverse-red.vercel.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Framework**: React 18 + Vite
 - **Styling**: Tailwind CSS / Custom CSS Utilities
@@ -36,7 +36,7 @@ Live Demo: [https://streamverse-red.vercel.app/](https://streamverse-red.vercel.
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -61,7 +61,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
-## 🏗️ Production Build
+##  Production Build
 
 To create an optimized production build:
 
@@ -73,7 +73,7 @@ Build outputs are saved to the `dist/` directory with automatic vendor chunk spl
 
 ---
 
-## ☁️ Deployment on Vercel
+##  Deployment on Vercel
 
 1. Push your changes to GitHub:
    ```bash
